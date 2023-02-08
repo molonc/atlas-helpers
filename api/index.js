@@ -62,7 +62,7 @@ export const deleteSample = (sampleId, sampleType, token) => {
   );
 }
 
-export const deleteExperiment = (experimentId, token) => {
+export const deleteExperiment = (experimentId, experimentType, token) => {
   return axios.delete(`${baseUrl}/${apiVer}/${labGroup}/xp/${experimentType}/${experimentId}`,
     { headers: { Authorization: token } }
   );
