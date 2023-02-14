@@ -1,6 +1,8 @@
 import axios from 'axios';
-import { SAMPLE_MODULES_ENUM, ANALYSIS_MODULES_ENUM } from '../const/enums';
-import { baseUrl, apiVer, labGroup } from '../config/api';
+import { SAMPLE_MODULES_ENUM, ANALYSIS_MODULES_ENUM } from '../const/enums.js';
+import { baseUrl, apiVer, labGroup } from '../config/api.js';
+
+export const apiUrl = (baseUrl, apiVer) => `${baseUrl}/${apiVer}`
 
 export const auth = async (username, password) => {
   const tokenRes = await axios.post(`${baseUrl}/${apiVer}/auth/login/`, { username: username, password: password });
