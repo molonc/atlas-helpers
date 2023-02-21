@@ -17,7 +17,7 @@ export const getSample = async (sampleId, token, atlasApiUrl, labGroup) => {
 }
 
 export const getExperiment = (experimentId, token, atlasApiUrl, labGroup) => {
-  return axios.get(`${atlasApiUrl}/${labGroup}/xp/${experimentId}/`,
+  return axios.get(`${atlasApiUrl}/${labGroup}/xp/${experimentId}`,
     { headers: { Authorization: token } }
   );
 }
