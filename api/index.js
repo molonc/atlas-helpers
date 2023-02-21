@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { SAMPLE_MODULES_ENUM, ANALYSIS_MODULES_ENUM } from '../const/enums.js';
 
-export const atlasApiUrl = (baseUrl, apiVer) => `${baseUrl}/${apiVer}`
+export const createAtlasApiUrl = (baseUrl, apiVer) => `${baseUrl}/${apiVer}`
 
 export const auth = async (username, password, atlasApiUrl) => {
   const tokenRes = await axios.post(`${atlasApiUrl}/auth/login/`, { username: username, password: password });
