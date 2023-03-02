@@ -23,7 +23,7 @@ export const getExperiment = (experimentId, token, atlasApiUrl, labGroup) => {
 }
 
 export const getAnalysis = async (analysisId, token, atlasApiUrl, labGroup) => {
-  const promises = ANALYSIS_MODULES_ENUM.map(element => axios.get(`${atlasApiUrl}/${labGroup}/ax/AX${element}?by_keywords=${analysisId}&search_on=s_uid`,
+  const promises = ANALYSIS_MODULES_ENUM.map(element => axios.get(`${atlasApiUrl}/${labGroup}/ax/${element}?by_keywords=AX${analysisId}&search_on=s_uid`,
     { headers: { Authorization: token } }
   ));
   const res = await Promise.all(promises);
